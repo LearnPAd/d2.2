@@ -139,10 +139,10 @@ and experiment the first version of \learnpad platform}
 %%% ---------------- Start whit chapter and sections here!
 %%% ------------------------------------------------------
 
-\chapter{What this deliverable is about?}
-\label{ch:about}
+\chapter{Introduction}
+\label{ch:intro}
 
-Deliverable D2.2 is the deliver of the first version of the \learnpad platform.
+Deliverable D2.2 is concerns the first version of the \learnpad platform.
 Therefore, this document will point out the links and places where you can find
 information about this first prototype.  It is not a detailed explanation of the
 architecture of the platform which you can find in deliverable D2.1
@@ -154,8 +154,23 @@ that have been setup in order to facilitate the development and the deployment
 of the \learnpad prototypes were presented in the deliverables 
 D7.1~\cite{learnpad:D7.1}, and D7.2~\cite{learnpad:D7.2}.
 
-\section{Source code of the platform}
-\label{sec:sourcecode}
+\section{Structure of the Deliverable}
+\label{sec:structure}
+
+The document is organized as follows:
+\begin{itemize}
+ \item Chapter~\ref{ch:sourcecode} reports how to access both the 
+source-code repositories and the other facilities available for the developers 
+of the \learnpad platform;
+ \item with respect to the open-source software, Chapter~\ref{ch:platform} 
+describes how to access and build the \textit{core development 
+projects}~\cite{learnpad:D7.1} in the platform;
+ \item Chapter~\ref{ch:testbed} introduces to a running instance of the 
+\learnpad Platform that the consortium made available as testbed.
+\end{itemize}
+
+\chapter{Developer's Repositories}
+\label{ch:sourcecode}
 
 As stated in the Consortium Agreement, the most of the source code of the 
 platform is placed under the open source license (defined and certified by Open 
@@ -186,14 +201,14 @@ space is accessible at :
 \url{http://www.adoxx.org/live/web/learnpad-developer-space/space}
 
 
-\section{The Platform}
-\label{sec:platform}
+\chapter{Worknig with the \learnpad Platform}
+\label{ch:platform}
 
 In the following it is reported how to get, to build, and to
 run the \learnpad platform from the source file under a linux-like
 operating system.
 
-\subsection{Get the Sources and Build the Platform}
+\section{Get the Sources and Build the Platform}
 \label{sec:build}
 
 The first action required is to locally clone the \learnpad
@@ -219,7 +234,7 @@ root directory of the project.
 ./build
 \end{lstlisting}
 
-\subsection{Run the Platform}
+\section{Run the Platform}
 \label{sec:run}
 
 After the build, a complete wiki instance will exists in the directory 
@@ -240,16 +255,19 @@ Once an instance of the \learnpad platform is started, it will be accessible on
 your local machine at \url{http://localhost:8080}.
 
 
-\section{A testbed for the \learnpad platform}
-\label{sec:testbed}
+\chapter{A Testbed for the \learnpad Platform}
+\label{ch:testbed}
 
 An running instance of the \learnpad platform is also deployed on an XWiki 
 server for testing purposes.  It allows to manipulate the platform in a pretty 
 recent version.  A new deployment is done every time a significant new feature 
 has been added or a blocking bug has been fixed. This instance is available 
-at the following address:
+at the address: \url{http://testbed.learnpad.eu/}.
 
-\url{http://testbed.learnpad.eu/}
+The main goal of this testbed is to facilitate the developers of the several 
+components aggregated by mean of the \texttt{\learnpad Core 
+Platform}~\cite{learnpad:D2.1} to test how their own software interacts with 
+the components developed by the other partners.
 
 This testing server may change a lot in time because of manipulations of
 partners.  Since it's a testing server, data may be erased at each new
