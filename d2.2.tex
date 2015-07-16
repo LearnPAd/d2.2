@@ -23,7 +23,7 @@
 %%% ------------------------------------------------------
 %%% ---------------- The Authors
 %%% ------------------------------------------------------
-\authors{Guglielmo De Angelis, Jean Simard}
+\authors{Guglielmo De Angelis (CNR), Jean Simard (XWIKI)}
 
 %%% ------------------------------------------------------
 %%% ---------------- The Editors
@@ -33,7 +33,7 @@
 %%% ------------------------------------------------------
 %%% ---------------- The reviewers
 %%% ------------------------------------------------------
-\reviewers{} 
+\reviewers{Andrea Polini (UNICAM)} 
 
 %%% ------------------------------------------------------
 %%% ---------------- The date
@@ -51,10 +51,10 @@
 \disseminationlevelpublic
 % \disseminationlevelconfidential
 %%% ------------------------------------------------------
-\version{0.5}%
-\contractualdeliverydate{}%
+\version{2.0}%
+\contractualdeliverydate{31 July 2014}%
 \actualdeliverydate{31 July 2014}%
-\contributingwp{ }%
+\contributingwp{WP2}%
 
 %%% ------------------------------------------------------
 %%% ---------------- abstract
@@ -71,9 +71,9 @@ and experiment the first version of \learnpad platform}
 %%% ------------------------------------------------------
 %%% ---------------- review table
 %%% ------------------------------------------------------
-\reviewoutline{text1}{text2}{text3}{text4}
-\reviewdraft{text1}{text2}{text3}{text4}
-\reviewinternal{text1}{text2}{text3}{text4}
+\reviewoutline{1 Jun. 2015}{0.2}{N.A.}{N.A.}
+\reviewdraft{26 Jun. 2015}{1.0}{N.A.}{N.A.}
+\reviewinternal{17 Jul. 2015}{2.0}{text3}{text4}
 \reviewcandidatefinal{text1}{text2}{text3}{text4}
 
 \begin{document}
@@ -85,7 +85,10 @@ and experiment the first version of \learnpad platform}
 %% ---------------- document history
 %% ------------------------------------------------------
 \begin{history}
-  \historyitem{0.1}{First Draft}{Jean Simard} 
+  \historyitem{0.1}{ToC}{Jean Simard} 
+  \historyitem{0.2}{ToC}{Jean Simard} 
+  \historyitem{1.0}{First Draft}{Jean Simard} 
+  \historyitem{2.0}{Internal Release}{Guglielmo De Angelis} 
 \end{history}
 
 %%% ------------------------------------------------------
@@ -141,29 +144,39 @@ and experiment the first version of \learnpad platform}
 Deliverable D2.2 is the deliver of the first version of the \learnpad platform.
 Therefore, this document will point out the links and places where you can find
 information about this first prototype.  It is not a detailed explanation of the
-architecture of the platform which you can find in deliverable D1.1
-\emph{Platform Architectural Description} neither it will explain implementation
-choices.
+architecture of the platform which you can find in deliverable D2.1
+\emph{Platform Architectural Description}~\cite{learnpad:D2.1} neither it will 
+explain implementation choices.
 
 \section{Source code of the platform}
 
 As stated in the Consortium Agreement, the source code of the platform is placed
 under the open source license (defined and certified by Open Source Initiative).
-Therefore, you can find the source code of the \learnpad platform on the web at
-the following address:
+Therefore, the source code of the \learnpad platform which is released under 
+any open-source licence can be accessed on the web at the following address:
 
 \url{https://github.com/LearnPAd/learnpad}
 
-Since every partner is using \texttt{git} and Github to implement, this link is
-always an up-to-date version of the Learn PAd platform.
+Since every partner is using \texttt{git} and 
+Github\footnote{\url{http//www.github.com}} to implement, this link is
+always an up-to-date version of the \learnpad platform.
 
-You'll also find the status of the build of the platform thanks to Travis-CI at
-the following link:
+The status of the build of the platform is monitored by means of to 
+Travis-CI~\cite{\url{https://travis-ci.org/}} and it is accessible at the 
+following link:
 
 \url{https://travis-ci.org/LearnPAd/learnpad}
 
-Travis-CI report each time the build of the last version of \learnpad is
+Travis-CI reports each time the build of the last version of \learnpad is
 breaking.
+
+Parts of the \learnpad platform is released under closed-source licences;
+specifically this software is mostly related to the development of the 
+modelling environment. With respect to the ADOxx technology, the developer's
+space is accessible at :
+
+\url{http://www.adoxx.org/live/web/learnpad-developer-space/space}
+
 
 \section{The platform}
 
@@ -180,15 +193,16 @@ deployment.
 
 In this platform, you are able to upload a new model from one of our Modeling
 tools (MagicDraw or Adoxx).  Modeling tools are then able to verify the models
-(look at deliverable D4.1 for more details about the verification process).
-Once the models has been verified, they are imported into the wiki.
+(please refer to deliverable D4.1~\cite{learnpad:D2.1} for more details about 
+the verification process). Once the models has been verified, they are imported 
+into the wiki.
 
 All imported models are listed in the main page and you can browse them.  For
-each element of the model, a \emph{feedback} button is available at the bottom.
-If the civil servant, looking at the model, want to give a feedback about the
-current page he's browsing, he can through this buttons.  All of these feedbacks
-are aggregate and sent to the Modeling tools when asked.  The modeler can then
-try to address the feedbacks in order to improve the models.
+each element of the model, a \textit{feedback} button is available at the 
+bottom. If the civil servant, looking at the model, want to give a feedback 
+about the current page he's browsing, he can through this buttons.  All of 
+these feedbacks are aggregate and sent to the modeling tools when asked.  The 
+modeler can then try to address the feedbacks in order to improve the models.
 
 % ---------------------------------- Start whit annexes here!
 % ----------------------------------
@@ -206,7 +220,7 @@ try to address the feedbacks in order to improve the models.
 % ---------------------------------- Bibliography starts here
 % ----------------------------------
 
-% \bibliographystyle{plain} 
-% \bibliography{biblio}
+\bibliographystyle{plain} 
+\bibliography{biblio}
 
 \end{document}  
