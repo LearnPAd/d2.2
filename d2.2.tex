@@ -186,13 +186,68 @@ space is accessible at :
 \url{http://www.adoxx.org/live/web/learnpad-developer-space/space}
 
 
+\section{The Platform}
+\label{sec:platform}
+
+In the following it is reported how to get, to build, and to
+run the \learnpad platform from the source file under a linux-like
+operating system.
+
+\subsection{Get the Sources and Build the Platform}
+\label{sec:build}
+
+The first action required is to locally clone the \learnpad
+repository form GitHub:
+
+\begin{lstlisting}[style=javaCode, breaklines]
+git clone https://github.com/LearnPAd/learnpad.git
+\end{lstlisting}
+
+Once the repository is cloned, it could be required to import 
+possible submodules:
+
+\begin{lstlisting}[style=javaCode, breaklines]
+cd learnpad
+git submodule init
+git submodule update
+\end{lstlisting}
+
+Finally, the build can be triggered by running the build script in the 
+root directory of the project.
+
+\begin{lstlisting}[style=javaCode, breaklines]
+./build
+\end{lstlisting}
+
+\subsection{Run the Platform}
+\label{sec:run}
+
+After the build, a complete wiki instance will exists in the directory 
+\texttt{lp-platform} and it will be the core of the platform. In order to run
+the platform launch the following command form a terminal:
+
+\begin{lstlisting}[style=javaCode, breaklines]
+./lp-platform/out/start
+\end{lstlisting}
+
+The running instance of the platform can be stopped by launching command:
+
+\begin{lstlisting}[style=javaCode, breaklines]
+./lp-platform/out/stop
+\end{lstlisting}
+
+Once an instance of the \learnpad platform is started, it will be accessible on 
+your local machine at \url{http://localhost:8080}.
+
+
 \section{A testbed for the \learnpad platform}
 \label{sec:testbed}
 
-The \learnpad platform is deployed on an XWiki server for testing purposes.  It
-allows to manipulate the platform in a pretty recent version.  A new deployment
-is done every time a significant new feature has been added or a blocking bug
-has been fixed.  You can look at this platform at the following address:
+An running instance of the \learnpad platform is also deployed on an XWiki 
+server for testing purposes.  It allows to manipulate the platform in a pretty 
+recent version.  A new deployment is done every time a significant new feature 
+has been added or a blocking bug has been fixed. This instance is available 
+at the following address:
 
 \url{http://testbed.learnpad.eu/}
 
@@ -201,10 +256,10 @@ partners.  Since it's a testing server, data may be erased at each new
 deployment.
 
 In this platform, you are able to upload a new model from one of our Modeling
-tools (MagicDraw or Adoxx).  Modeling tools are then able to verify the models
-(please refer to deliverable D4.1~\cite{learnpad:D2.1} for more details about 
-the verification process). Once the models has been verified, they are imported 
-into the wiki.
+tools (e.g. MagicDraw or Adoxx).  Modeling tools are then able to verify the 
+models (please refer to deliverable D4.1~\cite{learnpad:D4.1} for more details 
+about the verification process). Once the models has been verified, they are 
+imported into the wiki.
 
 All imported models are listed in the main page and you can browse them.  For
 each element of the model, a \textit{feedback} button is available at the 
