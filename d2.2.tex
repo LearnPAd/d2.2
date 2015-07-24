@@ -51,9 +51,9 @@
 \disseminationlevelpublic
 % \disseminationlevelconfidential
 %%% ------------------------------------------------------
-\version{2.0}%
-\contractualdeliverydate{31 July 2014}%
-\actualdeliverydate{31 July 2014}%
+\version{3.2}%
+\contractualdeliverydate{31 July 2015}%
+\actualdeliverydate{31 July 2015}%
 \contributingwp{WP2}%
 
 %%% ------------------------------------------------------
@@ -71,10 +71,10 @@ and experiment the first version of \learnpad platform}
 %%% ------------------------------------------------------
 %%% ---------------- review table
 %%% ------------------------------------------------------
-\reviewoutline{1 Jun. 2015}{0.2}{N.A.}{N.A.}
-\reviewdraft{26 Jun. 2015}{1.0}{N.A.}{N.A.}
-\reviewinternal{17 Jul. 2015}{2.0}{text3}{text4}
-\reviewcandidatefinal{text1}{text2}{text3}{text4}
+\reviewoutline{1 Jun. 2015}{0.2}{}{}
+\reviewdraft{26 Jun. 2015}{1.0}{}{}
+\reviewinternal{17 Jul. 2015}{2.0}{Andrea Polini}{}
+\reviewcandidatefinal{24 Jul. 2015}{3.2}{Antonia Bertolino}{}
 
 \begin{document}
 
@@ -89,6 +89,11 @@ and experiment the first version of \learnpad platform}
   \historyitem{0.2}{ToC}{Jean Simard} 
   \historyitem{1.0}{First Draft}{Jean Simard} 
   \historyitem{2.0}{Internal Release}{Guglielmo De Angelis} 
+  \historyitem{3.0}{Candidate Final}{Guglielmo De Angelis}
+  \historyitem{3.1}{Added clarifications about the \learnpad Developer 
+Space}{Guglielmo De Angelis}
+  \historyitem{3.2}{Added clarifications about the \learnpad 
+Developer's Repository}{Guglielmo De Angelis} 
 \end{history}
 
 %%% ------------------------------------------------------
@@ -117,7 +122,7 @@ and experiment the first version of \learnpad platform}
   \acronym{TL}{Technical Leader}%
   \acronym{WP}{Work Package}%
   \acronym{WPL}{Work Package Leader}
-  \acronym{\dots}{\dots~\dots}%
+%   \acronym{\dots}{\dots~\dots}%
 \end{acronyms}
 
 \tableofcontents
@@ -149,7 +154,7 @@ architecture of the platform which you can find in deliverable D2.1
 \emph{Platform Architectural Description}~\cite{learnpad:D2.1} neither it will 
 explain implementation choices.
 
-A more focused description about both the best pacticies, and the tools 
+A more focused description about both the best practices, and the tools 
 that have been setup in order to facilitate the development and the deployment 
 of the \learnpad prototypes were presented in the deliverables 
 D7.1~\cite{learnpad:D7.1}, and D7.2~\cite{learnpad:D7.2}.
@@ -181,8 +186,12 @@ following address:
 \url{https://github.com/LearnPAd/learnpad}
 
 Since every partner is using \texttt{git} and 
-Github\footnote{\url{http//www.github.com}} to implement, this link is
+GitHub\footnote{\url{http//www.github.com}} to implement, this link is
 always an up-to-date version of the \learnpad platform.
+Nevertheless, a snapshot of the \learnpad Platform released for M18 
+can be downloaded at:
+
+\url{www.learnpad.eu/docs/learnpad-master-M18.zip}
 
 The status of the build of the platform is monitored by means of to 
 Travis-CI~\footnote{\url{https://travis-ci.org/}} and it is accessible at the 
@@ -196,7 +205,7 @@ breaking.
 Parts of the \learnpad platform are released under closed-source licences; 
 specifically this software is mostly related to the development of the modelling 
 environment. The \learnpad Modelling Environment implemented on the ADOxx 
-meta-modelling platform is accessble at the \learnpad Developer Space;
+meta-modelling platform is accessible at the \learnpad Developer Space;
 \learnpad Developer Space:
  
 \url{http://www.adoxx.org/live/web/learnpad-developer-space/space}
@@ -206,7 +215,7 @@ ADOxx  can be freely downloaded at:
 
 \url{http://www.adoxx.org/live/web/learnpad-developer-space/prototype-v3.0}
 
-\chapter{Worknig with the \learnpad Platform}
+\chapter{Working with the \learnpad Platform}
 \label{ch:platform}
 
 In the following it is reported how to get, to build, and to
@@ -224,7 +233,7 @@ git clone https://github.com/LearnPAd/learnpad.git
 \end{lstlisting}
 
 Once the repository is cloned, it could be required to import 
-possible submodules:
+possible sub-modules:
 
 \begin{lstlisting}[style=javaCode, breaklines]
 cd learnpad
@@ -267,19 +276,35 @@ An running instance of the \learnpad platform is also deployed on an XWiki
 server for testing purposes.  It allows to manipulate the platform in a pretty 
 recent version.  A new deployment is done every time a significant new feature 
 has been added or a blocking bug has been fixed. This instance is available 
-at the address: \url{http://testbed.learnpad.eu/}.
+at the address:
+
+\url{http://testbed.learnpad.eu/}.
 
 The main goal of this testbed is to facilitate the developers of the several 
 components aggregated by mean of the \texttt{\learnpad Core 
 Platform}~\cite{learnpad:D2.1} to test how their own software interacts with 
-the components developed by the other partners.
+the components developed by the other partners. This testing server may change a 
+lot in time because of manipulations of partners.  
 
-This testing server may change a lot in time because of manipulations of
-partners.  Since it's a testing server, data may be erased at each new
-deployment.
+\begin{figure}
+ \centering
+ \includegraphics[width=0.8\textwidth]{./Figures/testbed.jpg}
+ % testbed.jpg: 1280x1004 pixel, 101dpi, 32.19x25.25 cm, bb=0 0 912 716
+ \caption{\learnpad Platform Testbed}
+ \label{fig:testbed}
+\end{figure}
 
-In this platform, you are able to upload a new model from one of our Modeling
-tools (e.g. MagicDraw or Adoxx).  Modeling tools are then able to verify the 
+Note that by accessing the testbed with a browser, it returns the 
+web pages of the running instance of the platform. Often, these web pages may 
+result or appear empty (see Figure~\ref{fig:testbed}), but this is normal.
+In fact, as described above the main purpose of the testbed is to provide
+a technical mean to the developers in order to test their components; thus the 
+most proper way of interacting with the testbed is not with a browser, yet.
+Also, since it's a testing server, data may be erased either at each new
+deployment, or periodically.
+
+In this platform, you are able to upload a new model from one of our Modelling
+tools (e.g. MagicDraw or ADOxx).  Modelling tools are then able to verify the 
 models (please refer to deliverable D4.1~\cite{learnpad:D4.1} for more details 
 about the verification process). Once the models has been verified, they are 
 imported into the wiki.
@@ -288,8 +313,8 @@ All imported models are listed in the main page and you can browse them.  For
 each element of the model, a \textit{feedback} button is available at the 
 bottom. If the civil servant, looking at the model, want to give a feedback 
 about the current page he's browsing, he can through this buttons.  All of 
-these feedbacks are aggregate and sent to the modeling tools when asked.  The 
-modeler can then try to address the feedbacks in order to improve the models.
+these feedbacks are aggregate and sent to the modelling tools when asked.  The 
+modeller can then try to address the feedbacks in order to improve the models.
 
 % ---------------------------------- Start whit annexes here!
 % ----------------------------------
