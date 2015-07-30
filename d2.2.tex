@@ -23,7 +23,19 @@
 %%% ------------------------------------------------------
 %%% ---------------- The Authors
 %%% ------------------------------------------------------
-\authors{Guglielmo De Angelis (CNR), Jean Simard (XWIKI)}
+\authors{
+Francesco Basciani (UDA),
+Mohamed Boussaa (XWIKI),
+Antonello Calabr\`o (CNR),
+Guglielmo De Angelis (CNR),
+Nesat Efendioglu (BOC),
+Sandro Emmenegger (FHNW),
+Damiano Falcioni (UNICAM),
+Daniele Gagliardi (FHNW),
+Tom Jorquera (LIN),
+Jean Simard (XWIKI),
+Giorgio Oronzo Spagnolo (CNR)
+}
 
 %%% ------------------------------------------------------
 %%% ---------------- The Editors
@@ -51,7 +63,7 @@
 \disseminationlevelpublic
 % \disseminationlevelconfidential
 %%% ------------------------------------------------------
-\version{3.3}%
+\version{4.0}%
 \contractualdeliverydate{31 July 2015}%
 \actualdeliverydate{31 July 2015}%
 \contributingwp{WP2}%
@@ -60,8 +72,11 @@
 %%% ---------------- abstract
 %%% ------------------------------------------------------
 
-\abstract{This deliverable is presenting the places and links where you can find
-and experiment the first version of \learnpad platform}
+\abstract{Deliverable D2.2 consists of a first version of \learnpad core 
+platform. The deliverable is of software nature. In this accompanying 
+documentation we provide a mapping of places and links from where the 
+``official'' released version of prototype at M18 can be retrieved, as well as 
+instructions for experimenting it. }
 
 %%% ------------------------------------------------------
 %%% ---------------- Keywords
@@ -96,6 +111,8 @@ Space}{Guglielmo De Angelis}
 Developer's Repository}{Guglielmo De Angelis} 
   \historyitem{3.3}{Added clarifications about the Testbed}{Guglielmo De 
 Angelis} 
+  \historyitem{3.4}{Typos fixed}{Jean Simard} 
+  \historyitem{4.0}{Final Release}{Antonia Bertolino, Guglielmo De Angelis, Jean Simard} 
 \end{history}
 
 %%% ------------------------------------------------------
@@ -149,18 +166,17 @@ Angelis}
 \chapter{Introduction}
 \label{ch:intro}
 
-Deliverable D2.2 concerns the first version of the \learnpad platform.
-Therefore, this document will point out the links and places where you can find
-information about this first prototype.  It is not a detailed explanation of the
+Deliverable D2.2 ``Core Platform Implementation'' concerns the first version of the \learnpad platform.
+This informal accompanying document will point out the links and places where the source files as well as related
+information about this first prototype can be found.  It is not a detailed explanation of the
 architecture of the platform which you can find in deliverable D2.1
-\emph{Platform Architectural Description}~\cite{learnpad:D2.1} neither it will
+\emph{Platform Architectural Description}~\cite{learnpad:D2.1} neither it will 
 explain implementation choices.
 
-A more focused description about both the best practices, and the tools that
-have been setup in order to facilitate the development and the deployment of the
-\learnpad prototypes were presented in the deliverables D7.1 \emph{Project best
-practices, support tools and integration plan}~\cite{learnpad:D7.1}, and D7.2
-\emph{Integration Tools and Systems}~\cite{learnpad:D7.2}.
+A more focused description about both the best practices, and the tools 
+that have been setup in order to facilitate the development and the deployment 
+of the \learnpad prototypes were presented in the deliverables 
+D7.1~\cite{learnpad:D7.1}, and D7.2~\cite{learnpad:D7.2}.
 
 \section{Structure of the Deliverable}
 \label{sec:structure}
@@ -170,19 +186,19 @@ The document is organized as follows:
  \item Chapter~\ref{ch:sourcecode} reports how to access both the 
 source-code repositories and the other facilities available for the developers 
 of the \learnpad platform;
- \item with respect to the open-source software, Chapter~\ref{ch:platform} 
+ \item With respect to the open-source software, Chapter~\ref{ch:platform} 
 describes how to access and build the \textit{core development 
 projects}~\cite{learnpad:D7.1} in the platform;
  \item Chapter~\ref{ch:testbed} introduces to a running instance of the 
-\learnpad Platform that the consortium made available as testbed.
+\learnpad Platform that the consortium makes available as a testbed.
 \end{itemize}
 
 \chapter{Developer's Repositories}
 \label{ch:sourcecode}
 
-As stated in the Consortium Agreement, the most of the source code of the 
+As stated in the Consortium Agreement, most of the source code of the 
 platform is placed under the open source license (defined and certified by Open 
-Source Initiative). Therefore, the source code of the \learnpad platform which 
+Source Initiative). Therefore, the source code of the \learnpad platform that 
 is released under any open-source licence can be accessed on the web at the 
 following address:
 
@@ -191,7 +207,7 @@ following address:
 Since every partner is using \texttt{git} and 
 GitHub\footnote{\url{http//www.github.com}} to implement, this link is
 always an up-to-date version of the \learnpad platform.
-Nevertheless, a snapshot of the \learnpad Platform released for M18 
+Nevertheless, a snapshot of the \learnpad Platform version ``officially'' released at M18 
 can be downloaded at:
 
 \url{http://www.learnpad.eu/docs/learnpad-master-M18.zip}
@@ -253,9 +269,9 @@ root directory of the project.
 \section{Run the Platform}
 \label{sec:run}
 
-After the build, a complete wiki instance will exists in the directory 
-\texttt{lp-platform} and it will be the core of the platform. In order to run
-the platform launch the following command form a terminal:
+After the build, a complete wiki instance will exist in the directory 
+\texttt{lp-platform} and this will be the core of the platform. In order to run
+the platform, the following command should be run from a terminal:
 
 \begin{lstlisting}[style=javaCode, breaklines]
 ./lp-platform/out/start
@@ -286,7 +302,7 @@ The main goal of this testbed is to facilitate the developers of the several
 components aggregated by mean of the \texttt{\learnpad Core 
 Platform}~\cite{learnpad:D2.1} to test how their own software interacts with 
 the components developed by the other partners. This testing server may change a 
-lot in time because of manipulations of partners.  
+lot along time because of manipulations of partners.  
 
 \begin{figure}[h!]
  \centering
@@ -308,14 +324,14 @@ deployment, or periodically.
 In this platform, you are able to upload a new model from one of our Modelling
 tools (e.g. MagicDraw or ADOxx).  Modelling tools are then able to verify the 
 models (please refer to deliverable D4.1~\cite{learnpad:D4.1} for more details 
-about the verification process). Once the models has been verified, they are 
+about the verification process). Once the models have been verified, they are 
 imported into the wiki.
 
 All imported models are listed in the main page and you can browse them.  For
 each element of the model, a \textit{feedback} button is available at the 
 bottom. If the civil servant, looking at the model, want to give a feedback 
-about the current page he's browsing, he can through this buttons.  All of 
-these feedbacks are aggregate and sent to the modelling tools when asked.  The 
+about the current page he/she is browsing, he/she can do so through these buttons.  All of 
+these feedbacks are aggregated and sent to the modelling tools when asked.  The 
 modeller can then try to address the feedbacks in order to improve the models.
 
 % ---------------------------------- Start whit annexes here!
